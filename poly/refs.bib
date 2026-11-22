@@ -1,0 +1,240 @@
+% ============================================================
+% Bibliographie — Cours 5 : Conteneurs logiciels & Docker
+% Références vérifiées — Université de Rennes · IRISA / DiverSE
+% ============================================================
+
+% ---- Articles fondateurs ----
+
+@article{merkel2014docker,
+  author    = {Merkel, Dirk},
+  title     = {{Docker: Lightweight Linux Containers for Consistent Development and Deployment}},
+  journal   = {Linux Journal},
+  volume    = {2014},
+  number    = {239},
+  pages     = {2},
+  year      = {2014},
+  month     = {March},
+  url       = {https://dl.acm.org/doi/10.5555/2600239.2600241},
+  note      = {Premier article académique sur Docker, publié peu après le lancement de Docker 1.0}
+}
+
+@article{bernstein2014containers,
+  author    = {Bernstein, David},
+  title     = {{Containers and Cloud: From LXC to Docker to Kubernetes}},
+  journal   = {IEEE Cloud Computing},
+  volume    = {1},
+  number    = {3},
+  pages     = {81--84},
+  year      = {2014},
+  doi       = {10.1109/MCC.2014.51},
+  publisher = {IEEE}
+}
+
+@article{burns2016borg,
+  author    = {Burns, Brendan and Grant, Brian and Oppenheimer, David and Brewer, Eric and Wilkes, John},
+  title     = {{Borg, Omega, and Kubernetes}},
+  journal   = {ACM Queue},
+  volume    = {14},
+  number    = {1},
+  pages     = {70--93},
+  year      = {2016},
+  doi       = {10.1145/2898442.2898444},
+  publisher = {ACM},
+  note      = {Article de référence sur l'évolution de l'orchestration chez Google}
+}
+
+@article{pahl2015containerisation,
+  author    = {Pahl, Claus},
+  title     = {{Containerisation and the PaaS Cloud}},
+  journal   = {IEEE Cloud Computing},
+  volume    = {2},
+  number    = {3},
+  pages     = {24--31},
+  year      = {2015},
+  doi       = {10.1109/MCC.2015.51},
+  publisher = {IEEE}
+}
+
+% ---- Performance et comparaisons ----
+
+@inproceedings{xavier2013performance,
+  author    = {Xavier, Miguel G. and Netto, Marcelo V. and Rossi, Fabio D. and De Rose, César A. F.},
+  title     = {{Performance Evaluation of Container-Based Virtualization for High Performance Computing Environments}},
+  booktitle = {21st Euromicro International Conference on Parallel, Distributed, and Network-Based Processing (PDP)},
+  pages     = {233--240},
+  year      = {2013},
+  doi       = {10.1109/PDP.2013.41},
+  publisher = {IEEE}
+}
+
+@inproceedings{felter2015updated,
+  author    = {Felter, Wes and Ferreira, Alexandre and Rajamony, Ram and Rubio, Juan},
+  title     = {{An Updated Performance Comparison of Virtual Machines and Linux Containers}},
+  booktitle = {IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)},
+  pages     = {171--172},
+  year      = {2015},
+  doi       = {10.1109/ISPASS.2015.7095802},
+  publisher = {IEEE},
+  note      = {Étude IBM comparant les performances VMs vs conteneurs Linux}
+}
+
+% ---- Sécurité des conteneurs ----
+
+@article{combe2016docker,
+  author    = {Combe, Theo and Martin, Antony and Di Pietro, Roberto},
+  title     = {{To Docker or Not to Docker: A Security Perspective}},
+  journal   = {IEEE Cloud Computing},
+  volume    = {3},
+  number    = {5},
+  pages     = {54--62},
+  year      = {2016},
+  doi       = {10.1109/MCC.2016.100},
+  publisher = {IEEE}
+}
+
+@inproceedings{shu2017study,
+  author    = {Shu, Rui and Gu, Xiaohui and Enck, William},
+  title     = {{A Study of Security Vulnerabilities on Docker Hub}},
+  booktitle = {Proceedings of the 7th ACM Conference on Data and Application Security and Privacy (CODASPY)},
+  pages     = {269--280},
+  year      = {2017},
+  doi       = {10.1145/3029806.3029832},
+  publisher = {ACM},
+  note      = {Analyse de 356 541 images Docker Hub, 36\% contenant des vulnérabilités HIGH ou CRITICAL}
+}
+
+@inproceedings{lin2018measurement,
+  author    = {Lin, Xin and Lei, Lingguang and Wang, Yuewu and Jing, Jiwu and Sun, Kun and Zhou, Quan},
+  title     = {{A Measurement Study on Linux Container Security: Attacks and Countermeasures}},
+  booktitle = {Proceedings of the 34th Annual Computer Security Applications Conference (ACSAC)},
+  pages     = {418--429},
+  year      = {2018},
+  doi       = {10.1145/3274694.3274720},
+  publisher = {ACM}
+}
+
+@inproceedings{sultan2019container,
+  author    = {Sultan, Sherif and Ahmad, Imtiaz and Dimitriou, Tassos},
+  title     = {{Container Security: Issues, Challenges, and the Road Ahead}},
+  journal   = {IEEE Access},
+  volume    = {7},
+  pages     = {52976--52996},
+  year      = {2019},
+  doi       = {10.1109/ACCESS.2019.2911732},
+  publisher = {IEEE}
+}
+
+% ---- Livres de référence ----
+
+@book{kane2023docker,
+  author    = {Kane, Sean P. and Matthias, Karl},
+  title     = {{Docker: Up \& Running: Shipping Reliable Containers in Production}},
+  edition   = {3rd},
+  publisher = {O'Reilly Media},
+  year      = {2023},
+  isbn      = {978-1098131821}
+}
+
+@book{burns2022kubernetes,
+  author    = {Burns, Brendan and Beda, Joe and Hightower, Kelsey and Evenson, Lachlan},
+  title     = {{Kubernetes: Up and Running: Dive into the Future of Infrastructure}},
+  edition   = {3rd},
+  publisher = {O'Reilly Media},
+  year      = {2022},
+  isbn      = {978-1098110208}
+}
+
+@book{rice2020container,
+  author    = {Rice, Liz},
+  title     = {{Container Security: Fundamental Technology Concepts that Protect Containerized Applications}},
+  publisher = {O'Reilly Media},
+  year      = {2020},
+  isbn      = {978-1492056706},
+  note      = {Référence de fond sur cgroups, namespaces, et la sécurité des conteneurs}
+}
+
+% ---- Standards et documents officiels ----
+
+@misc{nist-sp800-190,
+  author       = {{National Institute of Standards and Technology}},
+  title        = {{NIST Special Publication 800-190: Application Container Security Guide}},
+  year         = {2017},
+  howpublished = {\url{https://doi.org/10.6028/NIST.SP.800-190}},
+  note         = {Guide de référence du NIST pour la sécurité des conteneurs applicatifs}
+}
+
+@misc{oci-runtime-spec,
+  author       = {{Open Container Initiative}},
+  title        = {{OCI Runtime Specification}},
+  year         = {2015},
+  howpublished = {\url{https://github.com/opencontainers/runtime-spec}},
+  note         = {Standard industriel définissant le format des conteneurs (lancé par Docker + Linux Foundation)}
+}
+
+@misc{cncf-survey-2023,
+  author       = {{Cloud Native Computing Foundation}},
+  title        = {{CNCF Annual Survey 2023}},
+  year         = {2023},
+  howpublished = {\url{https://www.cncf.io/reports/cncf-annual-survey-2023/}},
+  note         = {96\% des organisations utilisent ou évaluent Kubernetes, 93\% des applications en conteneurs}
+}
+
+% ---- Outils de sécurité ----
+
+@misc{trivy-aquasec,
+  author       = {{Aqua Security}},
+  title        = {{Trivy: Vulnerability Scanner for Containers and other Artifacts}},
+  year         = {2023},
+  howpublished = {\url{https://trivy.dev/}},
+  note         = {Outil open source de scan de vulnérabilités pour images Docker, systèmes de fichiers, et dépôts git}
+}
+
+@misc{sigstore-cosign,
+  author       = {{Sigstore Project}},
+  title        = {{Cosign: Container Signing, Verification and Storage in an OCI Registry}},
+  year         = {2021},
+  howpublished = {\url{https://docs.sigstore.dev/cosign/overview/}},
+  note         = {Projet Linux Foundation pour la signature cryptographique des artefacts logiciels}
+}
+
+@misc{ntia-sbom-2021,
+  author       = {{National Telecommunications and Information Administration}},
+  title        = {{The Minimum Elements For a Software Bill of Materials (SBOM)}},
+  year         = {2021},
+  howpublished = {\url{https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom}},
+  note         = {Définition officielle américaine du SBOM (Software Bill of Materials), rendu obligatoire par Executive Order 14028}
+}
+
+@misc{slsa-framework,
+  author       = {{OpenSSF / Google}},
+  title        = {{SLSA: Supply-chain Levels for Software Artifacts}},
+  year         = {2021},
+  howpublished = {\url{https://slsa.dev/}},
+  note         = {Framework de niveaux de sécurité pour la chaîne d'approvisionnement logicielle}
+}
+
+% ---- Documentation officielle ----
+
+@misc{docker-docs,
+  author       = {{Docker Inc.}},
+  title        = {{Docker Documentation}},
+  year         = {2024},
+  howpublished = {\url{https://docs.docker.com/}},
+  note         = {Documentation officielle Docker : Dockerfile, Compose, registres, sécurité}
+}
+
+@misc{kernel-cgroups,
+  author       = {{Linux Kernel Community}},
+  title        = {{Control Group v2 — Linux Kernel Documentation}},
+  year         = {2024},
+  howpublished = {\url{https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html}},
+  note         = {Documentation officielle du noyau Linux sur cgroups v2}
+}
+
+@misc{kernel-namespaces,
+  author       = {{Linux Kernel Community}},
+  title        = {{Namespaces in operation (LWN.net series)}},
+  year         = {2013},
+  howpublished = {\url{https://lwn.net/Articles/531114/}},
+  note         = {Série de 7 articles de référence sur les namespaces Linux, par Michael Kerrisk}
+}
