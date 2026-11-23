@@ -13,6 +13,10 @@ drawings:
 transition: slide-left
 title: "Cours 5 — Conteneurs logiciels"
 mdc: true
+pdf: true
+export: true
+comark: true
+download: true
 ---
 
 # Déploiement Continu :  
