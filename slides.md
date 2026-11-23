@@ -780,12 +780,19 @@ layout: default
 
 # Merci
 
-Questions ?
+<div class="mt-8 max-w-2xl mx-auto text-left">
 
 **Ressources :**
-- [Docker docs](https://docs.docker.com/)
-- [Trivy](https://trivy.dev/)
-- [Cosign / Sigstore](https://sigstore.dev/)
-- [SLSA pour les images](https://slsa.dev/)
-- [OCI — Open Container Initiative](https://opencontainers.org/)
-- [cgroups v2](https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html)
+
+- 📄 **Poly du cours** : [télécharger le poly (PDF)](https://raw.githubusercontent.com/barais/devsecops.module5/refs/heads/master/poly/poly.pdf)
+* [Docker docs](https://docs.docker.com/)
+* [Trivy](https://trivy.dev/)
+* [Cosign / Sigstore](https://sigstore.dev/)
+* [SLSA pour les images](https://slsa.dev/)
+- ➡️ **Cours suivant — Cours 6 — DevSecOps : Attaques & Contre-mesures** : [https://olivier.barais.fr/devsecops.module6](https://olivier.barais.fr/devsecops.module6)
+
+</div>
+
+<div class="mt-8 text-sm opacity-50">
+Olivier Barais · Module DevSecOps
+</div>
