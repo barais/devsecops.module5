@@ -328,7 +328,7 @@ Isolent les processus :
   Layer 2 : add emacs          ← RUN apt install emacs
   Layer 1 : Debian rootfs      ← FROM debian:12
   ─────────────────────────
-  bootfs (kernel)              ← partagé avec l'hôte
+  bootfs                       ← démonté après le démarrage (kernel = celui de l'hôte)
 ```
 
 <img src="/docker-layers-aufs.png" class="mx-auto h-36 mt-2 rounded" />

@@ -243,9 +243,9 @@ En 2015, Docker et la Linux Foundation créent l'_Open Container Initiative_ (OC
 l'interopérabilité entre les différents moteurs de conteneurs (Docker Engine, containerd,
 Podman, CRI-O).
 
-Selon l'enquête annuelle CNCF 2023 @cncf-survey-2023, 93 % des applications déployées dans
-les organisations répondantes sont désormais conteneurisées, et 96 % utilisent ou évaluent
-Kubernetes.
+Selon l'enquête annuelle CNCF 2023 @cncf-survey-2023, plus de 90 % des organisations
+répondantes utilisent des conteneurs (pilotes et évaluations inclus), et 84 % utilisent ou
+évaluent Kubernetes.
 
 // ============================================================
 // 2. CONTENEURS VS MACHINES VIRTUELLES
@@ -366,7 +366,7 @@ pour construire ses images en couches superposées.
   ├────────────────────────────┤
   │  Debian 12 rootfs          │  ← image de base (lecture seule)
   ├────────────────────────────┤
-  │  bootfs (kernel)           │  ← partagé avec le système hôte
+  │  bootfs                    │  ← démonté après le démarrage (kernel = celui de l'hôte)
   └────────────────────────────┘
 ```
 
@@ -586,6 +586,8 @@ distingue les registres publics et les registres privés :
     ),
     [Docker Hub (`docker.io`)], [Public], [Registre historique, millions d'images officielles],
     [GHCR (`ghcr.io`)], [Public/Privé], [Intégré à GitHub, gratuit pour les projets publics],
+    [Quay.io], [Public/Privé], [Red Hat / IBM, focus sécurité],
+    [GitLab Container Registry], [Public/Privé], [Intégré à GitLab CI/CD],
     [AWS ECR], [Privé], [Intégré à l'écosystème AWS (ECS, EKS)],
     [Google Artifact Registry], [Privé], [Intégré à GKE et Cloud Build],
     [Azure Container Registry], [Privé], [Intégré à AKS et Azure DevOps],
@@ -701,10 +703,10 @@ Une image Docker est un artefact composite : elle contient l'OS de base, le runt
 les bibliothèques tierces, et le code applicatif. Chaque composant peut introduire des
 vulnérabilités @shu2017study @combe2016docker.
 
-Une étude de Shu et al. @shu2017study portant sur 356 541 images Docker Hub a révélé que
-36 % des images officielles et 58 % des images communautaires contenaient au moins une
-vulnérabilité de sévérité HIGH ou CRITICAL. Ces vulnérabilités proviennent principalement
-des paquets système présents dans l'image de base.
+Une étude de Shu et al. @shu2017study portant sur 356 218 images Docker Hub a révélé que
+plus de 80 % des images officielles et communautaires contenaient au moins une vulnérabilité
+de sévérité HIGH, avec en moyenne plus de 180 vulnérabilités par image. Ces vulnérabilités
+proviennent principalement des paquets système présents dans l'image de base.
 
 ```
   FROM python:3.12-slim
@@ -819,6 +821,9 @@ Grype permettent de générer et analyser ces SBOMs automatiquement.
 Cosign @sigstore-cosign est l'outil principal du projet Sigstore (Linux Foundation) pour signer
 cryptographiquement les images de conteneurs. La signature permet de vérifier qu'une image
 provient bien d'un éditeur de confiance et qu'elle n'a pas été altérée depuis sa publication.
+Docker propose aussi un mécanisme historique, le Docker Content Trust (DCT), basé sur Notary,
+pour signer et vérifier les images — Cosign/Sigstore en est l'approche moderne, standardisée au
+niveau OCI.
 
 ```bash
 # Générer une paire de clés

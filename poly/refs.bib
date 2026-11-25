@@ -57,16 +57,6 @@
 
 % ---- Performance et comparaisons ----
 
-@inproceedings{xavier2013performance,
-  author    = {Xavier, Miguel G. and Netto, Marcelo V. and Rossi, Fabio D. and De Rose, César A. F.},
-  title     = {{Performance Evaluation of Container-Based Virtualization for High Performance Computing Environments}},
-  booktitle = {21st Euromicro International Conference on Parallel, Distributed, and Network-Based Processing (PDP)},
-  pages     = {233--240},
-  year      = {2013},
-  doi       = {10.1109/PDP.2013.41},
-  publisher = {IEEE}
-}
-
 @inproceedings{felter2015updated,
   author    = {Felter, Wes and Ferreira, Alexandre and Rajamony, Ram and Rubio, Juan},
   title     = {{An Updated Performance Comparison of Virtual Machines and Linux Containers}},
@@ -100,7 +90,7 @@
   year      = {2017},
   doi       = {10.1145/3029806.3029832},
   publisher = {ACM},
-  note      = {Analyse de 356 541 images Docker Hub, 36\% contenant des vulnérabilités HIGH ou CRITICAL}
+  note      = {Analyse de 356 218 images Docker Hub : plus de 80\% des images officielles et communautaires contiennent au moins une vulnérabilité HIGH (moyenne > 180 vulnérabilités par image)}
 }
 
 @inproceedings{lin2018measurement,
@@ -113,27 +103,7 @@
   publisher = {ACM}
 }
 
-@inproceedings{sultan2019container,
-  author    = {Sultan, Sherif and Ahmad, Imtiaz and Dimitriou, Tassos},
-  title     = {{Container Security: Issues, Challenges, and the Road Ahead}},
-  journal   = {IEEE Access},
-  volume    = {7},
-  pages     = {52976--52996},
-  year      = {2019},
-  doi       = {10.1109/ACCESS.2019.2911732},
-  publisher = {IEEE}
-}
-
 % ---- Livres de référence ----
-
-@book{kane2023docker,
-  author    = {Kane, Sean P. and Matthias, Karl},
-  title     = {{Docker: Up \& Running: Shipping Reliable Containers in Production}},
-  edition   = {3rd},
-  publisher = {O'Reilly Media},
-  year      = {2023},
-  isbn      = {978-1098131821}
-}
 
 @book{burns2022kubernetes,
   author    = {Burns, Brendan and Beda, Joe and Hightower, Kelsey and Evenson, Lachlan},
@@ -159,7 +129,7 @@
   author       = {{National Institute of Standards and Technology}},
   title        = {{NIST Special Publication 800-190: Application Container Security Guide}},
   year         = {2017},
-  howpublished = {\url{https://doi.org/10.6028/NIST.SP.800-190}},
+  howpublished = {\\url{https://doi.org/10.6028/NIST.SP.800-190}},
   note         = {Guide de référence du NIST pour la sécurité des conteneurs applicatifs}
 }
 
@@ -167,7 +137,7 @@
   author       = {{Open Container Initiative}},
   title        = {{OCI Runtime Specification}},
   year         = {2015},
-  howpublished = {\url{https://github.com/opencontainers/runtime-spec}},
+  howpublished = {\\url{https://github.com/opencontainers/runtime-spec}},
   note         = {Standard industriel définissant le format des conteneurs (lancé par Docker + Linux Foundation)}
 }
 
@@ -175,8 +145,8 @@
   author       = {{Cloud Native Computing Foundation}},
   title        = {{CNCF Annual Survey 2023}},
   year         = {2023},
-  howpublished = {\url{https://www.cncf.io/reports/cncf-annual-survey-2023/}},
-  note         = {96\% des organisations utilisent ou évaluent Kubernetes, 93\% des applications en conteneurs}
+  howpublished = {\\url{https://www.cncf.io/reports/cncf-annual-survey-2023/}},
+  note         = {84\\% des organisations utilisent ou évaluent Kubernetes, plus de 90\\% utilisent des conteneurs}
 }
 
 % ---- Outils de sécurité ----
@@ -185,7 +155,7 @@
   author       = {{Aqua Security}},
   title        = {{Trivy: Vulnerability Scanner for Containers and other Artifacts}},
   year         = {2023},
-  howpublished = {\url{https://trivy.dev/}},
+  howpublished = {\\url{https://trivy.dev/}},
   note         = {Outil open source de scan de vulnérabilités pour images Docker, systèmes de fichiers, et dépôts git}
 }
 
@@ -193,7 +163,7 @@
   author       = {{Sigstore Project}},
   title        = {{Cosign: Container Signing, Verification and Storage in an OCI Registry}},
   year         = {2021},
-  howpublished = {\url{https://docs.sigstore.dev/cosign/overview/}},
+  howpublished = {\\url{https://docs.sigstore.dev/cosign/}},
   note         = {Projet Linux Foundation pour la signature cryptographique des artefacts logiciels}
 }
 
@@ -201,7 +171,7 @@
   author       = {{National Telecommunications and Information Administration}},
   title        = {{The Minimum Elements For a Software Bill of Materials (SBOM)}},
   year         = {2021},
-  howpublished = {\url{https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom}},
+  howpublished = {\\url{https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom}},
   note         = {Définition officielle américaine du SBOM (Software Bill of Materials), rendu obligatoire par Executive Order 14028}
 }
 
@@ -209,25 +179,17 @@
   author       = {{OpenSSF / Google}},
   title        = {{SLSA: Supply-chain Levels for Software Artifacts}},
   year         = {2021},
-  howpublished = {\url{https://slsa.dev/}},
+  howpublished = {\\url{https://slsa.dev/}},
   note         = {Framework de niveaux de sécurité pour la chaîne d'approvisionnement logicielle}
 }
 
 % ---- Documentation officielle ----
 
-@misc{docker-docs,
-  author       = {{Docker Inc.}},
-  title        = {{Docker Documentation}},
-  year         = {2024},
-  howpublished = {\url{https://docs.docker.com/}},
-  note         = {Documentation officielle Docker : Dockerfile, Compose, registres, sécurité}
-}
-
 @misc{kernel-cgroups,
   author       = {{Linux Kernel Community}},
   title        = {{Control Group v2 — Linux Kernel Documentation}},
   year         = {2024},
-  howpublished = {\url{https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html}},
+  howpublished = {\\url{https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html}},
   note         = {Documentation officielle du noyau Linux sur cgroups v2}
 }
 
@@ -235,6 +197,6 @@
   author       = {{Linux Kernel Community}},
   title        = {{Namespaces in operation (LWN.net series)}},
   year         = {2013},
-  howpublished = {\url{https://lwn.net/Articles/531114/}},
+  howpublished = {\\url{https://lwn.net/Articles/531114/}},
   note         = {Série de 7 articles de référence sur les namespaces Linux, par Michael Kerrisk}
 }
